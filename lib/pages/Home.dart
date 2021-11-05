@@ -1,10 +1,14 @@
-// ignore: file_names
 
 // by Jose Carlos Huerta Garcia
 // home.dart
 
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:vi_basics/pages/ContainerWithBoxDecorationWidget.dart';
+import 'package:vi_basics/pages/RowWidget.dart';
+
+import 'ColumnWidget.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -50,8 +54,12 @@ class _HomeState extends State<Home> {
           child: SafeArea(
             child: SingleChildScrollView(
               child: Column(
-                children: <Widget>[
-                  const ContainerWithBoxDecorationWidget(),
+                children: const <Widget>[
+                  ContainerWithBoxDecorationWidget(),
+                  Divider(),
+                  ColumnWidget(),
+                  Divider(),
+                  RowWidget()
                 ],
               ),
             ),
@@ -62,3 +70,5 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+
