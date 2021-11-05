@@ -3,6 +3,8 @@
 
 // ignore_for_file: file_names
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class ContainerWithBoxDecorationWidget extends StatelessWidget {
@@ -35,8 +37,34 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
               )
             ],
           ),
-          child: const Center(
-            child: Text('container'),
+          child: Center(
+            child: RichText(
+                text: const TextSpan(
+                  text: 'Flutter World',
+                  style: TextStyle(
+                    fontSize: 24.0,
+                    color: Colors.deepPurple,
+                    decoration: TextDecoration.underline,
+                    decorationColor: Colors.deepPurple,
+                    decorationStyle: TextDecorationStyle.dotted,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.normal,
+                  ),
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'for',
+                    ),
+                    TextSpan(
+                      text: ' Mobile',
+                      style: TextStyle(
+                        color: Colors.deepOrange,
+                        fontStyle: FontStyle.normal,
+                        fontWeight: FontWeight.bold,
+                      )
+                    )
+                  ]
+                )
+            ),
           ),
         ),
       ],
