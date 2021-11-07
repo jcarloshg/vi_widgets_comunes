@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: SafeArea(
           child: SafeArea(
             child: SingleChildScrollView(
