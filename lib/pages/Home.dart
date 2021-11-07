@@ -9,6 +9,20 @@ import 'package:vi_basics/pages/RowWidget.dart';
 import 'package:vi_basics/pages/TypesButtons.dart';
 
 import 'ColumnWidget.dart';
+import 'PopupMenuButtonwidget.dart';
+
+class TodoMenuItem {
+  final String title;
+  final Icon icon;
+  TodoMenuItem({required this.title, required this.icon});
+}
+
+List<TodoMenuItem> foodMenuList = [
+  TodoMenuItem(title: 'Fast Food', icon: const Icon(Icons.fastfood)),
+  TodoMenuItem(title: 'Remind me', icon: const Icon(Icons.add_alert)),
+  TodoMenuItem(title: 'Flight', icon: const Icon(Icons.flight)),
+  TodoMenuItem(title: 'Music', icon: const Icon(Icons.audiotrack)),
+];
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -38,15 +52,16 @@ class _HomeState extends State<Home> {
             color: Colors.white70,
           ),
         ),
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(75.0),
-          child: Container(
-            color: Colors.lightGreen,
-            height: 75,
-            width: double.infinity,
-            child: const Center(child: Text('Bottom')),
-          ),
-        ),
+        bottom: const PopupMenuButtonwidget(),
+        // PreferredSize(
+        //   preferredSize: const Size.fromHeight(75.0),
+        //   child: Container(
+        //     color: Colors.lightGreen,
+        //     height: 75,
+        //     width: double.infinity,
+        //     child: const Center(child: Text('Bottom')),
+        //   ),
+        //),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -56,13 +71,15 @@ class _HomeState extends State<Home> {
               child: Column(
                 children: const <Widget>[
                   Divider(),
-                  TypesButtons(),
-                  Divider(),
                   ContainerWithBoxDecorationWidget(),
                   Divider(),
                   ColumnWidget(),
                   Divider(),
-                  RowWidget()
+                  RowWidget(),
+                  Divider(),
+                  TypesButtons(),
+                  Divider(),
+                  // ButtonsBarWidget()
                 ],
               ),
             ),
