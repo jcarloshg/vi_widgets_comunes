@@ -14,7 +14,7 @@ class ContainerWithBoxDecorationWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: <Widget>[
+      children: <Widget>[ 
         Container(
           height: 100.0,
           decoration: const BoxDecoration(

@@ -1,4 +1,3 @@
-
 // by Jose Carlos Huerta Garcia
 // home.dart
 
@@ -7,6 +6,7 @@
 import 'package:flutter/material.dart';
 import 'package:vi_basics/pages/ContainerWithBoxDecorationWidget.dart';
 import 'package:vi_basics/pages/RowWidget.dart';
+import 'package:vi_basics/pages/TypesButtons.dart';
 
 import 'ColumnWidget.dart';
 
@@ -55,6 +55,9 @@ class _HomeState extends State<Home> {
             child: SingleChildScrollView(
               child: Column(
                 children: const <Widget>[
+                  Divider(),
+                  TypesButtons(),
+                  Divider(),
                   ContainerWithBoxDecorationWidget(),
                   Divider(),
                   ColumnWidget(),
@@ -70,5 +73,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-
